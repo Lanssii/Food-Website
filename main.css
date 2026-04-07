@@ -6,14 +6,26 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.nav-wrapper,
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button {
+  all: unset;
+  cursor: pointer;
+}
 nav {
   background-color: #474747;
   height: 45px;
   padding: 10px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 
 nav span {
@@ -22,18 +34,71 @@ nav span {
 
 .nav-number,
 .nav-mail {
+  gap: 5px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 5px;
 }
 
 .nav-info {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
   gap: 10px;
+}
+
+header {
+  padding: 10px;
+}
+
+.shop-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  color: #474747;
+  font-family: Playfair Display;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 42px;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #2c2f24;
+  font-weight: 500;
+}
+
+.header-nav img {
+  width: 55px;
+  height: 56px;
+}
+
+.header-nav-active {
+  background-color: #dbdfd0;
+  border: none;
+  border-radius: 34px;
+  padding: 7px 20px 7px 20px;
+}
+.book-table {
+  border: 2px solid #2c2f24;
+  border-radius: 118px;
+  padding: 10px 20px 10px 20px;
+  color: #182226;
+  font-weight: 700;
+}
+
+.book-table:hover {
+  background-color: #2c2f24;
+  color: white;
+  transition: 0.3s;
 }
 
 @media (max-width: 768px) {
