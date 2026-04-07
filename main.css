@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+nav {
+  background-color: #474747;
+  height: 45px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+nav span {
+  color: white;
+}
+
+.nav-number,
+.nav-mail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+}
