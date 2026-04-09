@@ -61,7 +61,7 @@ header {
   gap: 10px;
 
   color: #474747;
-  font-family: Playfair Display;
+  font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: 600;
   font-size: 42px;
@@ -174,7 +174,7 @@ header {
 
 /* ====== MENU ====== */
 .menu-section {
-  margin-top: 90px;
+  padding: 90px 0px;
 }
 .menu-section h1 {
   font-family: "Playfair Display", serif;
@@ -228,6 +228,109 @@ header {
   color: #6c1018;
   transition: 0.3 ease;
 }
+
+/* ====== CONTACT ====== */
+.contact-section {
+  width: 100%;
+  background-color: #f9f9f7;
+  height: 800px;
+  padding: 120px 0px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 90px;
+}
+.image-and-contact {
+  position: relative;
+  display: inline-block;
+}
+
+.contacts {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  color: white;
+  background-color: #474747;
+
+  padding: 50px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 410px;
+}
+
+.contacts-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.mobile,
+.email,
+.address {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  font-weight: 400;
+}
+
+.contacts-info h3 {
+  font-weight: 700;
+  font-size: 24px;
+
+  margin-bottom: 15px;
+}
+
+.contact-section h1 {
+  color: #2c2f24;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 1.2;
+}
+
+.contact-information {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 550px;
+  line-height: 1.4;
+}
+
+.first-info {
+  font-weight: 500;
+  font-size: 18px;
+  color: #2c2f24;
+}
+
+.second-info {
+  font-size: 16px;
+  color: #414536;
+}
+
+.more-about-btn {
+  background-color: transparent;
+  padding: 18px 8px;
+  border-radius: 118px;
+  border: 2px solid #2c2f24;
+  color: #2c2f24;
+  font-weight: 700;
+  width: 180px;
+  text-align: center;
+}
+
+.more-about-btn:hover {
+  background-color: #2c2f24;
+  color: white;
+  transition: 0.3s;
+}
+
 /* ====== MEDIA QUERIES ====== */
 
 @media (max-width: 1024px) {
@@ -245,13 +348,31 @@ header {
     height: 500px;
   }
   .menu-grid {
-    margin-top: 34px;
-
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
   .menu-section h1 {
     font-size: 36px;
+  }
+  .contacts-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .contact-section h1 {
+    font-size: 40px;
+  }
+  .first-info {
+    font-size: 16px;
+  }
+  .second-info {
+    font-size: 14px;
+  }
+  .more-about-btn {
+    padding: 15px 8px;
+    width: 130px;
+  }
+  .contacts {
+    padding: 30px;
   }
 }
 
@@ -274,6 +395,9 @@ header {
   }
   .menu-section h1 {
     font-size: 26px;
+  }
+  .contact {
+    flex-direction: column;
   }
 }
 
