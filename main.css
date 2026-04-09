@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -144,7 +144,6 @@ header {
 .hero-buttons {
   display: flex;
   gap: 10px;
-  font-family: "DM Sans", sans-serif;
   font-weight: 700;
 }
 
@@ -173,9 +172,68 @@ header {
   transition: 0.3s;
 }
 
+/* ====== MENU ====== */
+.menu-section {
+  margin-top: 90px;
+}
+.menu-section h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 55px;
+  text-align: center;
+}
+
+.menu-grid {
+  margin-top: 64px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #dbdfd0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  height: 375px;
+}
+.menu-card:hover {
+  margin-top: -10px;
+  transition: 0.3s ease;
+  background-color: #f9f9f7;
+}
+.menu-card h3 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #2c2f24;
+}
+
+.menu-card p {
+  line-height: 1.5;
+  color: #414536;
+}
+
+.menu-card a {
+  font-weight: 700;
+  color: #ad343e;
+  text-decoration: none;
+}
+.menu-card a:hover {
+  color: #6c1018;
+  transition: 0.3 ease;
+}
 /* ====== MEDIA QUERIES ====== */
 
 @media (max-width: 1024px) {
+  /* .shop-name {
+    font-size: 30px;
+  } */
   .hero h1 {
     font-size: 70px;
   }
@@ -185,6 +243,15 @@ header {
   }
   .hero {
     height: 500px;
+  }
+  .menu-grid {
+    margin-top: 34px;
+
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .menu-section h1 {
+    font-size: 36px;
   }
 }
 
@@ -204,6 +271,9 @@ header {
     flex-direction: column;
   }
   .hero {
+  }
+  .menu-section h1 {
+    font-size: 26px;
   }
 }
 
