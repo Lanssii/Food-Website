@@ -233,7 +233,6 @@ header {
 .contact-section {
   width: 100%;
   background-color: #f9f9f7;
-  height: 800px;
   padding: 120px 0px;
 }
 
@@ -384,7 +383,92 @@ header {
   border-radius: 12px;
 }
 
+/* ====== DELIVERY ====== */
+.delivery-section {
+  width: 100%;
+  background-color: #f9f9f7;
+  padding: 120px 0px;
+}
+
+.delivery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 90px;
+}
+
+.delivery-images {
+  display: flex;
+  gap: 24px;
+}
+
+.delivery-images .image-container1 {
+  width: 430px;
+  height: 600px;
+}
+.delivery-images .image-container2 {
+  width: 290px;
+  height: 334px;
+}
+.delivery-images .image-container3 {
+  width: 290px;
+  height: 240px;
+}
+
+.delivery-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.delivery-images-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 26px;
+}
+.delivery-section h1 {
+  color: #2c2f24;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 1.2;
+}
+.delivery-time,
+.delivery-offer,
+.delivery-service {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  font-weight: 400;
+}
+.delivery-info {
+  width: 100%;
+  max-width: 460px;
+  line-height: 1.4;
+}
+
+.delivery-information {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.designer-information {
+  margin-top: 20px;
+  color: #414536;
+}
+
 /* ====== MEDIA QUERIES ====== */
+@media (max-width: 1440px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 @media (max-width: 1024px) {
   /* .shop-name {
@@ -427,6 +511,28 @@ header {
   .contacts {
     padding: 30px;
   }
+  .service-section h1 {
+    font-size: 40px;
+  }
+  .delivery-section h1 {
+    font-size: 40px;
+  }
+  .delivery-images .image-container1 {
+    width: 300px;
+    height: 418px;
+  }
+  .delivery-images .image-container2 {
+    width: 206px;
+    height: 236px;
+  }
+  .delivery-images .image-container3 {
+    width: 206px;
+    height: 170px;
+  }
+  .service-card .image-container {
+    width: 216px;
+    height: 226px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -451,6 +557,10 @@ header {
   }
   .contact {
     flex-direction: column;
+  }
+  .delivery {
+    flex-direction: column;
+    gap: 30px;
   }
 }
 
