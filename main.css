@@ -447,7 +447,7 @@ header {
 }
 .delivery-info {
   width: 100%;
-  max-width: 460px;
+  max-width: 430px;
   line-height: 1.4;
 }
 
@@ -461,6 +461,95 @@ header {
 .designer-information {
   margin-top: 20px;
   color: #414536;
+}
+
+/* ====== REVIEWS ====== */
+
+.reviews-section {
+  padding: 120px 0px;
+}
+
+.reviews-section h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 55px;
+  text-align: center;
+  color: #2c2f24;
+}
+.reviews-grid {
+  margin-top: 64px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.reviews-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+  max-width: 416px;
+  height: 408px;
+  padding: 30px;
+  background-color: #f9f9f7;
+  border-radius: 12px;
+}
+
+.reviews-card hr {
+  border: none;
+  height: 1px;
+  background: #dbdfd0;
+  margin: 20px 0;
+}
+.reviews-card:hover {
+  margin-top: -10px;
+  transition: 0.3s ease;
+  background-color: #f9f9f7;
+  border-radius: 12px;
+}
+.reviews-card h3 {
+  text-align: start;
+  font-weight: 700;
+  font-size: 24px;
+  color: #ad343e;
+}
+
+.reviews-card p {
+  line-height: 1.5;
+  color: #414536;
+  text-align: start;
+}
+.review-text {
+  font-size: 18px;
+}
+
+.reviews-card .image-container {
+  width: 70px;
+  height: 70px;
+}
+
+.reviews-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.person-review {
+  width: 100%;
+  max-width: 230px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.person-name {
+  font-weight: 700;
+  font-style: Bold;
+  color: #2c2f24;
 }
 
 /* ====== MEDIA QUERIES ====== */
@@ -533,6 +622,13 @@ header {
     width: 216px;
     height: 226px;
   }
+
+  .reviews-card h3 {
+    font-size: 20px;
+  }
+  .reviews-card p {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -561,6 +657,9 @@ header {
   .delivery {
     flex-direction: column;
     gap: 30px;
+  }
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
