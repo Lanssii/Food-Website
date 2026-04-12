@@ -697,6 +697,16 @@ button {
   .read-articles-btn {
     width: 130px;
   }
+
+  .contact .image-container {
+    width: 440px;
+    height: 380px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .contact {
+    gap: 40px;
+  }
 }
 
 @media (max-width: 768px) {
