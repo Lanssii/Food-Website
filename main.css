@@ -653,7 +653,6 @@ button {
   }
   .more-about-btn {
     padding: 15px 8px;
-    width: 130px;
   }
   .contacts {
     padding: 30px;
@@ -697,9 +696,6 @@ button {
   .blog-section h1 {
     font-size: 40px;
   }
-  .read-articles-btn {
-    width: 130px;
-  }
 
   .contact .image-container {
     width: 440px;
@@ -710,6 +706,9 @@ button {
   .contact {
     gap: 40px;
   }
+  .read-articles-btn {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -717,7 +716,7 @@ button {
     font-size: 25px;
   }
   .hero h1 {
-    font-size: 48px;
+    font-size: 45px;
   }
 
   .hero p {
@@ -728,9 +727,17 @@ button {
     flex-direction: column;
   }
   .hero {
+    background-size: 140%;
   }
   .menu-section h1 {
-    font-size: 26px;
+    font-size: 30px;
+  }
+  .contact-section h1,
+  .service-section h1,
+  .delivery-section h1,
+  .reviews-section h1,
+  .blog-section h1 {
+    font-size: 30px;
   }
   .contact {
     flex-direction: column;
@@ -745,9 +752,63 @@ button {
   .blog-cards-container {
     flex-direction: column;
   }
+  .hero-btn-book {
+    padding: 15px 20px;
+  }
 }
 
 @media (max-width: 480px) {
+  .menu-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contact .image-container {
+    width: 360px;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .contacts {
+    padding: 20px;
+  }
+  .contacts-info h3 {
+    font-size: 16px;
+  }
+  .mobile,
+  .email,
+  .address {
+    font-size: 13px;
+  }
+  .service-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .delivery-images .image-container1 {
+    width: 230px;
+    height: 348px;
+  }
+  .delivery-images .image-container2 {
+    width: 156px;
+    height: 186px;
+  }
+  .delivery-images .image-container3 {
+    width: 156px;
+    height: 120px;
+  }
+  .reviews-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .hero {
+    height: 400px;
+    background-size: 180%;
+  }
+  .hero h1 {
+    font-size: 35px;
+  }
+  .blog-right-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contact-information {
+    padding: 30px;
+  }
 }
 @media (max-width: 320px) {
 }

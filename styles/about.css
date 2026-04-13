@@ -198,3 +198,26 @@
     flex-direction: column;
   }
 }
+
+@media (max-width: 480px) {
+  .info-description {
+    font-size: 14px;
+  }
+  .guest-information h1 {
+    font-size: 30px;
+  }
+  .icon-and-info img {
+    width: 30px;
+    height: 30px;
+  }
+  .video-btn img {
+    width: 70px;
+    height: 70px;
+  }
+  .video h1 {
+    font-size: 30px;
+  }
+  .info-number {
+    font-size: 30px;
+  }
+}

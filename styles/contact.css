@@ -144,10 +144,29 @@ textarea:focus {
     flex-direction: column;
   }
   form {
-    width: 80%;
+    width: 90%;
   }
   .contact-us-info {
     gap: 30px;
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact h1 {
+    font-size: 35px;
+  }
+  form {
+    padding: 30px;
+  }
+  input,
+  textarea {
+    padding: 14px 20px;
+  }
+  .contact-us-info .number {
+    font-size: 18px;
+  }
+  .contact-us-info p {
+    font-size: 16px;
   }
 }

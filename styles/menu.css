@@ -134,4 +134,19 @@
   .product {
     grid-template-columns: repeat(2, 1fr);
   }
+  .price {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 35px;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  .product {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
