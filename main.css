@@ -15,14 +15,17 @@ body {
 * {
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+  color: #2c2f24;
+}
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 16px;
 }
-.nav-wrapper,
-.header-wrapper {
+.nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -615,9 +618,9 @@ button {
 /* ====== MEDIA QUERIES ====== */
 
 @media (max-width: 1024px) {
-  /* .shop-name {
+  .shop-name span {
     font-size: 30px;
-  } */
+  }
   .hero h1 {
     font-size: 70px;
   }
@@ -710,6 +713,9 @@ button {
 }
 
 @media (max-width: 768px) {
+  .shop-name span {
+    font-size: 25px;
+  }
   .hero h1 {
     font-size: 48px;
   }

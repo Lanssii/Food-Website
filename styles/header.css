@@ -24,10 +24,29 @@
 }
 
 /* ====== HEADER ====== */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 header {
   padding: 20px 15px;
 }
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 
+.right-section {
+  display: flex;
+  align-items: center;
+}
+.header-nav-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .shop-name {
   display: flex;
   justify-content: center;
@@ -85,9 +104,84 @@ header {
   transition: 0.3s;
 }
 
+/* ====== HAMBURGER MENU ====== */
+.hamburger-menu {
+  width: fit-content;
+}
+.hamburger-menu.show {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 5px;
+  padding: 15px;
+}
+.hamburger-menu.show .bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #f9f9f7;
+  z-index: 1000;
+  padding: 40px;
+
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.sidebar.show {
+  transform: translateX(0);
+}
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 35px;
+  cursor: pointer;
+  color: #000;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+/* ====== OVERLAY ====== */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный */
+  z-index: 999; /* На 1 меньше, чем у .sidebar (который 1000) */
+  display: none; /* Прячем по умолчанию */
+  cursor: pointer;
+}
+
+.overlay.show {
+  display: block;
+}
+
 /* ====== MEDIA QUERIES ====== */
 @media (max-width: 768px) {
-  nav {
+  .navbar {
+    display: none;
+  }
+  .header-nav {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .book-table-container {
     display: none;
   }
 }

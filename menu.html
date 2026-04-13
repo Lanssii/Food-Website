@@ -47,25 +47,40 @@
 
     <!-- HEADER -->
     <header>
-      <div class="container header-wrapper">
-        <div class="shop-name">
-          <a href="index.html"
-            ><img src="images/japanese-food.png" alt="shop-logo"
-          /></a>
-          <span>Bistro Bliss</span>
+      <div class="container header-container">
+        <div class="left-section">
+          <div class="shop-name">
+            <a href="index.html"
+              ><img src="images/japanese-food.png" alt="shop-logo"
+            /></a>
+            <span>Bistro Bliss</span>
+          </div>
+          <div class="header-nav-container">
+            <nav class="header-nav">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="menu.html" class="header-nav-active">Menu</a>
+              <a href="blog.html">Pages</a>
+              <a href="contact.html">Contact</a>
+            </nav>
+          </div>
         </div>
-        <div class="header-nav">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="menu.html" class="header-nav-active">Menu</a>
-          <a href="blog.html">Pages</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <div>
-          <button class="book-table">Book A Table</button>
+        <div class="right-section">
+          <div class="book-table-container">
+            <button class="book-table">Book A Table</button>
+          </div>
+          <!-- Hamburger Menu--->
+          <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <!-- sidebar Menu--->
+          <div class="sidebar"><button class="close-btn">&times;</button></div>
         </div>
       </div>
     </header>
+    <div class="overlay"></div>
 
     <!-- MAIN CONTENT -->
     <main class="main-content">
@@ -255,5 +270,6 @@
         <p>Copyright &copy; 2023 Hashtag Developer. All Rights Reserved</p>
       </div>
     </footer>
+    <script src="scripts/mobile.js"></script>
   </body>
 </html>
