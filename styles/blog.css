@@ -1,0 +1,50 @@
+/* ====== INTRO ====== */
+.intro-section {
+  padding: 60px 40px;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.intro h1 {
+  font-size: 100px;
+  text-align: center;
+  color: #2c2f24;
+}
+.intro p {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  color: #495460;
+  width: 100%;
+  max-width: 550px;
+}
+
+/* ====== BLOG ====== */
+
+.blog {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* ====== MEDIA QUARIES ====== */
+
+@media (max-width: 1024px) {
+  .intro h1 {
+    font-size: 70px;
+  }
+  .blog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 50px;
+  }
+  .blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
