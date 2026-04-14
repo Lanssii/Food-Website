@@ -219,62 +219,12 @@
       <section class="reviews-section">
         <div class="reviews container">
           <h1>What Our Customers Say</h1>
+          <!-- 
+           The reviews-grid is populated dynamically via JavaScript (reviews-api.js).
+           Data is fetched from a local data.json file to simulate a real API call.
+           -->
           <div class="reviews-grid">
-            <div class="reviews-card">
-              <h3>“The best restaurant”</h3>
-              <p class="review-text">
-                Last night, we dined at place and were simply blown away. From
-                the moment we stepped in, we were enveloped in an inviting
-                atmosphere and greeted with warm smiles.
-              </p>
-              <hr />
-              <div class="person-review">
-                <div class="image-container">
-                  <img src="images/reviews-profile1.png" alt="profile-icon" />
-                </div>
-                <div>
-                  <p class="person-name">Sophire Robson</p>
-                  <p>Los Angeles, CA</p>
-                </div>
-              </div>
-            </div>
-            <div class="reviews-card">
-              <h3>“Simply delicious””</h3>
-              <p class="review-text">
-                Place exceeded my expectations on all fronts. The ambiance was
-                cozy and relaxed, making it a perfect venue for our anniversary
-                dinner. Each dish was prepared and beautifully presented.
-              </p>
-              <hr />
-              <div class="person-review">
-                <div class="image-container">
-                  <img src="images/reviews-profile2.png" alt="profile-icon" />
-                </div>
-                <div>
-                  <p class="person-name">Matt Cannon</p>
-                  <p>San Diego, CA</p>
-                </div>
-              </div>
-            </div>
-            <div class="reviews-card">
-              <h3>“One of a kind restaurant”</h3>
-              <p class="review-text">
-                The culinary experience at place is first to none. The
-                atmosphere is vibrant, the food - nothing short of
-                extraordinary. The food was the highlight of our evening. Highly
-                recommended.
-              </p>
-              <hr />
-              <div class="person-review">
-                <div class="image-container">
-                  <img src="images/reviews-profile3.png" alt="profile-icon" />
-                </div>
-                <div>
-                  <p class="person-name">Andy Smith</p>
-                  <p>San Francisco, CA</p>
-                </div>
-              </div>
-            </div>
+            <!-- Generated review cards will be injected here -->
           </div>
         </div>
       </section>
@@ -347,5 +297,6 @@
       </div>
     </footer>
     <script src="scripts/mobile.js"></script>
+    <script src="scripts/reviews-api.js"></script>
   </body>
 </html>

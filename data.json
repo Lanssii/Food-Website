@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "user_name": "Elene Avaliani",
+    "location": "Georgia, Tbilisi",
+    "headline": "The best restaurant ever!",
+    "comment": "The atmosphere was incredible and the steaks were cooked to perfection. I will definitely be coming back next week with my friends.",
+    "profile_photo": "../images/reviews-profile1.png",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "user_name": "John Doe",
+    "location": "New York, USA",
+    "headline": "Authentic Italian taste!",
+    "comment": "I felt like I was in Rome! The carbonara was creamy and the tiramisu is the best I've had in the city.",
+    "profile_photo": "../images/reviews-profile2.png",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "user_name": "Sophie Schneider",
+    "location": "Munich, Germany",
+    "headline": "Great coffee, slow service!",
+    "comment": "The latte was top-notch, but I had to wait 20 minutes for my toast. Good for a lazy Sunday, not for a quick break.",
+    "profile_photo": "../images/reviews-profile3.png",
+    "rating": 4
+  }
+]
