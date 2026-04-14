@@ -220,4 +220,16 @@
   .info-number {
     font-size: 30px;
   }
+  .video-section {
+    height: 490px;
+  }
+  .information {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 390px) {
+  .info-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

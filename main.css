@@ -809,6 +809,28 @@ button {
   .contact-information {
     padding: 30px;
   }
+  .contacts {
+    right: 0px;
+  }
 }
-@media (max-width: 320px) {
+@media (max-width: 390px) {
+  .contact .image-container {
+    width: 300px;
+    height: 240px;
+  }
+  .contacts-info {
+    gap: 15px;
+  }
+  .delivery-images .image-container1 {
+    width: 200px;
+    height: 318px;
+  }
+  .delivery-images .image-container2 {
+    width: 126px;
+    height: 156px;
+  }
+  .delivery-images .image-container3 {
+    width: 126px;
+    height: 100px;
+  }
 }
