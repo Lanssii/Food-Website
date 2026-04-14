@@ -129,6 +129,18 @@ textarea:focus {
   color: #ad343e;
 }
 
+.error {
+  color: red;
+  font-size: 14px;
+  margin-left: 20px;
+}
+.success {
+  background-color: green;
+}
+.success:hover {
+  background-color: rgb(15, 79, 15);
+}
+
 /* ====== MEDIA QUARIES ====== */
 
 @media (max-width: 1024px) {
