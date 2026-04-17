@@ -2,14 +2,25 @@
 
 // ===== SELECT ELEMENTS =====
 const banner = document.getElementById("cookie-banner");
-const button = document.getElementById("accept-cookies");
+const buttonAccept = document.getElementById("accept-cookies");
+const buttonReject = document.getElementById("reject-cookies");
 
-if (!localStorage.getItem("cookiesAccepted")) {
+const userChoice = localStorage.getItem("cookieChoice");
+
+// Show banner only if user hasn't chosen yet
+if (!userChoice) {
   banner.style.display = "block";
 }
 
-button.addEventListener("click", () => {
-  localStorage.setItem("cookiesAccepted", "true");
+// Accept cookies
+buttonAccept.addEventListener("click", () => {
+  localStorage.setItem("cookieChoice", "accepted");
+  banner.style.display = "none";
+});
+
+// Reject cookies
+buttonReject.addEventListener("click", () => {
+  localStorage.setItem("cookieChoice", "rejected");
   banner.style.display = "none";
 });
 

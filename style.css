@@ -636,9 +636,15 @@ button {
   border: none;
   padding: 8px 20px;
   margin-left: 15px;
+  margin-top: 15px;
   cursor: pointer;
   border-radius: 4px;
   font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.cookie-banner button:hover {
+  transform: scale(1.1);
 }
 
 /* ====== MEDIA QUERIES ====== */
