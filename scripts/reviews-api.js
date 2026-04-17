@@ -7,7 +7,7 @@ const reviewsContainer = document.querySelector(".reviews-grid");
 
 async function getReview() {
   try {
-    const res = await fetch("data.json");
+    const res = await fetch("../data.json");
     const data = await res.json();
 
     reviewsContainer.innerHTML = "";
