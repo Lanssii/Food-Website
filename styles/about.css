@@ -158,7 +158,10 @@
 }
 
 /* ====== MEDIA QUERIES ====== */
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
+  .guest {
+    gap: 60px;
+  }
   .information {
     gap: 56px;
   }
@@ -179,6 +182,19 @@
     overflow: hidden;
   }
 }
+@media (max-width: 1024px) {
+  .guest {
+    gap: 20px;
+  }
+  .guest-image .image-container {
+    width: 300px;
+    height: 426px;
+  }
+  .info-grid div {
+    padding: 20px 30px;
+  }
+}
+
 @media (max-width: 768px) {
   .video-btn img {
     width: 80px;
