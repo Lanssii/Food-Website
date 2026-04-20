@@ -649,6 +649,40 @@ button {
 
 /* ====== MEDIA QUERIES ====== */
 
+@media (max-width: 1440px) {
+  .hero h1 {
+    font-size: 80px;
+  }
+  .service-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .service-card .image-container {
+    width: 250px;
+    height: 250px;
+  }
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .delivery-images .image-container1 {
+    width: 330px;
+    height: 500px;
+  }
+  .delivery-images .image-container2 {
+    width: 200px;
+    height: 244px;
+  }
+  .delivery-images .image-container3 {
+    width: 200px;
+    height: 200px;
+  }
+  .delivery {
+    gap: 40px;
+  }
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 1024px) {
   .shop-name span {
     font-size: 30px;
@@ -696,16 +730,16 @@ button {
     font-size: 40px;
   }
   .delivery-images .image-container1 {
-    width: 300px;
-    height: 418px;
+    width: 260px;
+    height: 380px;
   }
   .delivery-images .image-container2 {
-    width: 206px;
-    height: 236px;
+    width: 160px;
+    height: 200px;
   }
   .delivery-images .image-container3 {
-    width: 206px;
-    height: 170px;
+    width: 160px;
+    height: 130px;
   }
   .service-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -740,6 +774,9 @@ button {
   }
   .read-articles-btn {
     font-size: 14px;
+  }
+  .contact-information {
+    padding: 30px;
   }
 }
 
@@ -787,6 +824,24 @@ button {
   .hero-btn-book {
     padding: 15px 20px;
   }
+  .contacts {
+    right: 0px;
+  }
+  .service-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .delivery-images .image-container1 {
+    width: 200px;
+    height: 318px;
+  }
+  .delivery-images .image-container2 {
+    width: 126px;
+    height: 156px;
+  }
+  .delivery-images .image-container3 {
+    width: 126px;
+    height: 90px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -813,18 +868,6 @@ button {
   .service-grid {
     grid-template-columns: repeat(1, 1fr);
   }
-  .delivery-images .image-container1 {
-    width: 230px;
-    height: 348px;
-  }
-  .delivery-images .image-container2 {
-    width: 156px;
-    height: 186px;
-  }
-  .delivery-images .image-container3 {
-    width: 156px;
-    height: 120px;
-  }
   .reviews-grid {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -841,9 +884,6 @@ button {
   .contact-information {
     padding: 30px;
   }
-  .contacts {
-    right: 0px;
-  }
 }
 @media (max-width: 390px) {
   .contact .image-container {
@@ -854,15 +894,15 @@ button {
     gap: 15px;
   }
   .delivery-images .image-container1 {
-    width: 200px;
-    height: 318px;
+    width: 160px;
+    height: 280px;
   }
   .delivery-images .image-container2 {
-    width: 126px;
-    height: 156px;
+    width: 90px;
+    height: 126px;
   }
   .delivery-images .image-container3 {
-    width: 126px;
-    height: 100px;
+    width: 90px;
+    height: 70px;
   }
 }

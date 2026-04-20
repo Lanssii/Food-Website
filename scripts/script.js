@@ -37,7 +37,7 @@ let closeBtn = document.querySelector(".close-btn");
 // ===== RESPONSIVE NAVIGATION =====
 // Moves navigation into sidebar on mobile
 function checkWidth() {
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 1200) {
     headerNavContainer.style.display = "none";
     sidebar.appendChild(headerNav);
     hamburgerMenu.classList.add("show");

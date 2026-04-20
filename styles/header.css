@@ -173,15 +173,17 @@ header {
 }
 
 /* ====== MEDIA QUERIES ====== */
-@media (max-width: 768px) {
-  .navbar {
-    display: none;
-  }
+@media (max-width: 1200px) {
   .header-nav {
     flex-direction: column;
     gap: 40px;
   }
   .book-table-container {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
     display: none;
   }
 }
