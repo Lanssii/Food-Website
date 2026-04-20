@@ -162,10 +162,9 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный */
-  z-index: 999; /* На 1 меньше, чем у .sidebar (который 1000) */
-  display: none; /* Прячем по умолчанию */
-  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
 }
 
 .overlay.show {
