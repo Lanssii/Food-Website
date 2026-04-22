@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Website Booking</title>
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/booking.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container nav-wrapper">
+        <div class="nav-info">
+          <div class="nav-number">
+            <img src="../images/phone.png" alt="phone" />
+            <span>(414) 857 - 0107</span>
+          </div>
+          <div class="nav-mail">
+            <img src="../images/mail.png" alt="mail" />
+            <span>yummy@bistrobliss</span>
+          </div>
+        </div>
+        <div class="nav-icons">
+          <a href="#"><img src="../images/twitter.png" alt="twitter-icon" /></a>
+          <a href="#"
+            ><img src="../images/facebook.png" alt="facebook-icon"
+          /></a>
+          <a href="#"
+            ><img src="../images/instagram.png" alt="instagram-icon"
+          /></a>
+          <a href="#"><img src="../images/github.png" alt="github-icon" /></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+      <div class="container header-container">
+        <div class="left-section">
+          <a href="../index.html">
+            <div class="shop-name">
+              <img src="../images/japanese-food.png" alt="shop-logo" />
+              <span>Bistro Bliss</span>
+            </div></a
+          >
+          <div class="header-nav-container">
+            <nav class="header-nav">
+              <a href="../index.html" class="header-nav-active">Home</a>
+              <a href="../pages/about.html">About</a>
+              <a href="../pages/menu.html">Menu</a>
+              <a href="../pages/blog.html">Pages</a>
+              <a href="../pages/contact.html">Contact</a>
+            </nav>
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="book-table-container">
+            <button class="book-table">Book A Table</button>
+          </div>
+          <!-- Hamburger Menu--->
+          <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <!-- sidebar Menu--->
+          <div class="sidebar"><button class="close-btn">&times;</button></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="overlay"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <section class="intro-section">
+        <div class="intro container">
+          <h1>Book A Table</h1>
+          <p>
+            We consider all the drivers of change gives you the components you
+            need to change to create a truly happens.
+          </p>
+        </div>
+      </section>
+      <section class="booking-section">
+        <div class="map-bg">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.5551009641913!2d44.780296!3d41.7732491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40446dab2d6e8d71%3A0xacaa58d35c3d9af1!2sEthnographer%20restaurant!5e0!3m2!1sru!2sge!4v1776874679018!5m2!1sru!2sge"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="booking-us container">
+          <div class="form-container">
+            <form id="form" novalidate>
+              <div class="personal-info">
+                <div class="form-group">
+                  <label for="name">Name</label
+                  ><input
+                    type="text"
+                    id="name"
+                    name="user_name"
+                    placeholder="Enter your name"
+                    required
+                  />
+                  <div id="nameError" class="error"></div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label
+                  ><input
+                    type="email"
+                    id="email"
+                    name="user_email"
+                    placeholder="Enter email address"
+                    required
+                  />
+                  <div id="emailError" class="error"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label
+                ><input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Write a subject"
+                  required
+                />
+                <div id="subjectError" class="error"></div>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="user_message"
+                  placeholder="Write your message (optional)"
+                ></textarea>
+              </div>
+              <button class="send-btn" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-container container">
+        <section class="footer-brand">
+          <div class="brand-info">
+            <img src="../images/brand-logo-footer.png" alt="brand-logo" />
+            <h3>Bistro Bliss</h3>
+          </div>
+          <p>
+            In the new era of technology we look a in the future with certainty
+            and pride to for our company and.
+          </p>
+          <div class="social-media">
+            <img src="../images/footer-twitter-logo.png" alt="twitter-icon" />
+            <img src="../images/footer-facebook-logo.png" alt="facebook-icon" />
+            <img
+              src="../images/footer-instagram-logo.png"
+              alt="instagram-icon"
+            />
+            <img src="../images/footer-github-logo.png" alt="github-icon" />
+          </div>
+        </section>
+        <nav class="footer-nav">
+          <section>
+            <h3>Pages</h3>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../pages/about.html">About</a></li>
+              <li><a href="../pages/menu.html">Menu</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="../pages/blog.html">Blog</a></li>
+              <li><a href="../pages/contact.html">Contact</a></li>
+              <li><a href="#">Delivery</a></li>
+            </ul>
+          </section>
+          <section>
+            <h3>Utility Pages</h3>
+            <ul>
+              <li><a href="#">Start Here</a></li>
+              <li><a href="#">Styleguide</a></li>
+              <li><a href="#">Password Protected</a></li>
+              <li><a href="#">404 Not Found</a></li>
+              <li><a href="#">Licenses</a></li>
+              <li><a href="#">Changelog</a></li>
+              <li><a href="#">View More</a></li>
+            </ul>
+          </section>
+        </nav>
+        <section class="footer-insta">
+          <h3>Follow Us On Instagram</h3>
+          <div class="insta-grid">
+            <div class="image-container">
+              <img src="../images/footer-grid1.jpg" alt="food" />
+            </div>
+            <div class="image-container">
+              <img src="../images/footer-grid2.jpg" alt="food" />
+            </div>
+            <div class="image-container">
+              <img src="../images/footer-grid3.jpg" alt="food" />
+            </div>
+            <div class="image-container">
+              <img src="../images/footer-grid4.jpg" alt="food" />
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2023 Hashtag Developer. All Rights Reserved</p>
+      </div>
+    </footer>
+    <!-- Cookie Notification Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+      <p>
+        We use cookies to improve your experience. By clicking "Accept", you
+        agree to our storage of cookies.
+      </p>
+      <button id="accept-cookies">Accept</button>
+      <button id="reject-cookies">Reject</button>
+    </div>
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/contact-form.js"></script>
+  </body>
+</html>
