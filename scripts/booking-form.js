@@ -14,15 +14,30 @@ let timeError = document.getElementById("timeError");
 let phoneError = document.getElementById("phoneError");
 let totalPersonError = document.getElementById("totalPersonError");
 
+// ===== UI =====
+// Date input Ui
+dateInput.value = new Date().toISOString().split("T")[0];
+
+// prevent entering past date
+dateInput.min = new Date().toISOString().split("T")[0];
+
+// Time input UI
+const now = new Date();
+const hours = String(now.getHours()).padStart(2, "0");
+const minutes = String(now.getMinutes()).padStart(2, "0");
+
+timeInput.value = `${hours}:${minutes}`;
+
 // ===== FORM =====
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   let isValid = true;
+
   let namePattern = /^[a-zA-Zа-яА-ЯёЁ\s]+$/;
-  const phonePattern = /^(\d{3})[- ]?(\d{3})[- ]?(\d{4})$/;
+  const phonePattern = /^\+?[0-9]{9,15}$/;
+
   const today = new Date().toISOString().split("T")[0];
-  //   dateInput.min = new Date().toISOString().split("T")[0];
 
   nameError.textContent = "";
   dateError.textContent = "";
@@ -71,7 +86,8 @@ form.addEventListener("submit", (e) => {
     totalPersonError.textContent = "This field is required.";
   } else if (totalPersonInput.value < 1 || totalPersonInput.value > 10) {
     isValid = false;
-    totalPersonError.textContent = "Enter between 1 and 10 people.";
+    totalPersonError.textContent =
+      "Please contact us in order to discuss the booking for more than 10 people.";
   }
 
   if (isValid) {
@@ -88,7 +104,9 @@ form.addEventListener("submit", (e) => {
 });
 
 phoneInput.addEventListener("input", () => {
-  phoneInput.value = phoneInput.value.replace(/(?!^\+)[^0-9 ]/g, "");
+  phoneInput.value = phoneInput.value
+    .replace(/(?!^\+)[^0-9 ]/g, "")
+    .slice(0, 15);
 });
 nameInput.addEventListener("input", () => {
   nameInput.value = nameInput.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, "");
