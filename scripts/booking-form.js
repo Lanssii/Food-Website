@@ -21,6 +21,8 @@ form.addEventListener("submit", (e) => {
   let isValid = true;
   let namePattern = /^[a-zA-Zа-яА-ЯёЁ\s]+$/;
   const phonePattern = /^(\d{3})[- ]?(\d{3})[- ]?(\d{4})$/;
+  const today = new Date().toISOString().split("T")[0];
+  //   dateInput.min = new Date().toISOString().split("T")[0];
 
   nameError.textContent = "";
   dateError.textContent = "";
@@ -44,32 +46,50 @@ form.addEventListener("submit", (e) => {
     isValid = false;
     phoneError.textContent = "This field is required.";
   } else if (!phonePattern.test(phoneInput.value.trim())) {
+    isValid = false;
     phoneError.textContent = "Please enter a valid phone number.";
   }
   // date check
   if (dateInput.value.trim() === "") {
     isValid = false;
     dateError.textContent = "This field is required.";
+  } else if (dateInput.value < today) {
+    isValid = false;
+    dateError.textContent = "Date cannot be in the past.";
   }
   // time check
   if (timeInput.value.trim() === "") {
     isValid = false;
     timeError.textContent = "This field is required.";
+  } else if (timeInput.value < "10:00" || timeInput.value > "23:59") {
+    isValid = false;
+    timeError.textContent = "We work from 10:00 to 00:00.";
   }
   // totalPerson check
   if (totalPersonInput.value.trim() === "") {
     isValid = false;
     totalPersonError.textContent = "This field is required.";
   } else if (totalPersonInput.value < 1 || totalPersonInput.value > 10) {
+    isValid = false;
     totalPersonError.textContent = "Enter between 1 and 10 people.";
+  }
+
+  if (isValid) {
+    sendBtn.classList.add("success");
+    sendBtn.textContent = "Form is sent!";
+
+    form.reset();
+
+    setTimeout(() => {
+      sendBtn.classList.remove("success");
+      sendBtn.textContent = "Send";
+    }, 2000);
   }
 });
 
 phoneInput.addEventListener("input", () => {
-  phoneInput.value = phoneInput.value.replace(/[^0-9+ ]/g, "");
+  phoneInput.value = phoneInput.value.replace(/(?!^\+)[^0-9 ]/g, "");
 });
 nameInput.addEventListener("input", () => {
   nameInput.value = nameInput.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, "");
 });
-
-sendBtn.addEventListener("click", () => {});
