@@ -68,11 +68,11 @@ form {
   flex-direction: column;
   gap: 8px;
 }
-.personal-info {
+.date-and-time {
   display: flex;
   gap: 24px;
 }
-.personal-info .form-group {
+.date-and-time .form-group {
   flex: 1;
 }
 label {
