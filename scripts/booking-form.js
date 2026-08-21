@@ -35,7 +35,7 @@ form.addEventListener("submit", (e) => {
   let isValid = true;
 
   let namePattern = /^[a-zA-Zа-яА-ЯёЁ\s]+$/;
-  const phonePattern = /^\+?[0-9]{9,15}$/;
+  const phonePattern = /^\+?[0-9]{9,12}$/;
 
   const today = new Date().toISOString().split("T")[0];
 
@@ -104,10 +104,15 @@ form.addEventListener("submit", (e) => {
 });
 
 phoneInput.addEventListener("input", () => {
-  phoneInput.value = phoneInput.value
-    .replace(/(?!^\+)[^0-9 ]/g, "")
-    .slice(0, 15);
+  let digits = phoneInput.value.replace(/\D/g, "").slice(0, 12);
+
+  if (digits.startsWith("995")) {
+    digits = "+" + digits;
+  }
+
+  phoneInput.value = digits;
 });
+
 nameInput.addEventListener("input", () => {
   nameInput.value = nameInput.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, "");
 });
