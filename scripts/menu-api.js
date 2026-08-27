@@ -130,6 +130,31 @@ function initButtons() {
   });
 }
 
-// Init
-initButtons();
-loadCategory("All");
+// Init & handle URL Query Parameters
+function initPage() {
+  initButtons();
+
+  // Parse category from URL parameter ?category=...
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectedCategory = urlParams.get("category");
+
+  // Check if category exists in map; fallback to "All" if missing or invalid
+  if (selectedCategory && CATEGORIES[selectedCategory]) {
+    const buttons = document.querySelectorAll(".buttons-section button");
+
+    buttons.forEach((btn) => {
+      if (btn.textContent.trim() === selectedCategory) {
+        btn.classList.add("btn-active");
+      } else {
+        btn.classList.remove("btn-active");
+      }
+    });
+
+    loadCategory(selectedCategory);
+  } else {
+    loadCategory("All");
+  }
+}
+
+// Execution Entrypoint
+initPage();
