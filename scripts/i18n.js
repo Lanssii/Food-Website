@@ -1,85 +1,68 @@
-// ===== LANGUAGE SWITCHER =====
+const DEFAULT_LANG = "ka";
 
-const langRoot = document.getElementById("lang");
+async function initI18n() {
+  try {
+    const [ka, en] = await Promise.all([
+      fetch("./locales/ka/translation.json").then((res) => {
+        if (!res.ok) throw new Error("Georgian translations failed to load");
+        return res.json();
+      }),
+      fetch("./locales/en/translation.json").then((res) => {
+        if (!res.ok) throw new Error("English translations failed to load");
+        return res.json();
+      }),
+    ]);
 
-if (langRoot) {
-  const langBtn = document.getElementById("langBtn");
-  const langFlag = document.getElementById("langFlag");
-  const langOptions = langRoot.querySelectorAll(".lang-option");
-
-  function openLanguageMenu() {
-    langRoot.classList.add("open");
-    langBtn.setAttribute("aria-expanded", "true");
-  }
-
-  function closeLanguageMenu() {
-    langRoot.classList.remove("open");
-    langBtn.setAttribute("aria-expanded", "false");
-  }
-
-  function setLang(lang) {
-    const selectedLang = lang === "en" ? "en" : "ka";
-
-    // Update flag
-    langFlag.firstElementChild.setAttribute("href", `#flag-${selectedLang}`);
-
-    // Update selected option and checkmark
-    langOptions.forEach((option) => {
-      const isSelected = option.dataset.lang === selectedLang;
-      option.setAttribute("aria-selected", String(isSelected));
-    });
-
-    // Update document language
-    document.documentElement.lang = selectedLang;
-
-    // Save preference
+    let savedLang = DEFAULT_LANG;
     try {
-      localStorage.setItem("lang", selectedLang);
+      savedLang = localStorage.getItem("lang") || DEFAULT_LANG;
     } catch (error) {
-      console.warn("Language preference could not be saved.");
+      console.warn("Could not read saved language.");
     }
 
-    // Change i18next language
-    if (window.i18next?.isInitialized) {
-      window.i18next.changeLanguage(selectedLang);
-    }
-  }
-
-  langBtn.addEventListener("click", () => {
-    langRoot.classList.contains("open")
-      ? closeLanguageMenu()
-      : openLanguageMenu();
-  });
-
-  langOptions.forEach((option) => {
-    option.addEventListener("click", () => {
-      setLang(option.dataset.lang);
-      closeLanguageMenu();
-      langBtn.focus();
+    await i18next.init({
+      lng: savedLang === "ka" ? "ka" : "en",
+      fallbackLng: "en",
+      resources: {
+        ka: { translation: ka },
+        en: { translation: en },
+      },
     });
+
+    translatePage();
+  } catch (error) {
+    console.error("i18next initialization failed:", error);
+  }
+}
+
+function translatePage() {
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    element.innerHTML = i18next.t(element.dataset.i18n);
   });
 
-  document.addEventListener("click", (event) => {
-    if (!langRoot.contains(event.target)) {
-      closeLanguageMenu();
-    }
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+    element.placeholder = i18next.t(element.dataset.i18nPlaceholder);
   });
 
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && langRoot.classList.contains("open")) {
-      closeLanguageMenu();
-      langBtn.focus();
-    }
-  });
+  document.documentElement.lang = i18next.language;
 
-  // Restore saved language
-  let savedLang = "ka";
+  window.dispatchEvent(
+    new CustomEvent("languageChanged", { detail: i18next.language })
+  );
+}
+
+async function changeLanguage(lang) {
+  const selectedLang = lang === "en" ? "en" : "ka";
+
+  if (window.i18next?.isInitialized) {
+    await i18next.changeLanguage(selectedLang);
+  }
 
   try {
-    savedLang = localStorage.getItem("lang") || "ka";
+    localStorage.setItem("lang", selectedLang);
   } catch (error) {
-    console.warn("Could not read saved language.");
+    console.warn("Language preference could not be saved.");
   }
 
-  setLang(savedLang);
+  translatePage();
 }
