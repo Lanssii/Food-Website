@@ -77,10 +77,126 @@
           </div>
         </div>
         <div class="right-section">
-          <div class="book-table-container">
-            <a href="../pages/booking.html">
-              <button class="book-table">Book A Table</button></a
+          <!-- Language Switcher -->
+
+          <svg
+            width="0"
+            height="0"
+            style="position: absolute"
+            aria-hidden="true"
+          >
+            <defs>
+              <!-- Georgia -->
+              <symbol
+                id="flag-ka"
+                viewBox="0 0 90 60"
+                preserveAspectRatio="none"
+              >
+                <rect width="90" height="60" fill="#fff" />
+                <g fill="#e8112d">
+                  <rect x="38" width="14" height="60" />
+                  <rect y="23" width="90" height="14" />
+                  <path
+                    id="sm"
+                    d="M-1.75-6h3.5v4.25H6v3.5H1.75V6h-3.5V1.75H-6v-3.5h4.25z"
+                    transform="translate(19 11.5)"
+                  />
+                  <use href="#sm" x="52" />
+                  <use href="#sm" y="37" />
+                  <use href="#sm" x="52" y="37" />
+                </g>
+              </symbol>
+
+              <!-- United Kingdom (English) -->
+              <symbol
+                id="flag-en"
+                viewBox="0 0 60 30"
+                preserveAspectRatio="none"
+              >
+                <clipPath id="uk-clip">
+                  <path d="M30 15h30v15zv15H0zH0V0zV0h30z" />
+                </clipPath>
+                <rect width="60" height="30" fill="#012169" />
+                <path d="M0 0l60 30M60 0L0 30" stroke="#fff" stroke-width="6" />
+                <path
+                  d="M0 0l60 30M60 0L0 30"
+                  clip-path="url(#uk-clip)"
+                  stroke="#c8102e"
+                  stroke-width="4"
+                />
+                <path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10" />
+                <path d="M30 0v30M0 15h60" stroke="#c8102e" stroke-width="6" />
+              </symbol>
+
+              <symbol id="chevron" viewBox="0 0 24 24">
+                <path
+                  d="M6 9l6 6 6-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </symbol>
+              <symbol id="tick" viewBox="0 0 24 24">
+                <path
+                  d="M5 12l5 5 9-10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </symbol>
+            </defs>
+          </svg>
+
+          <div class="lang" id="lang">
+            <button
+              class="lang-btn"
+              id="langBtn"
+              type="button"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              aria-label="Change language"
             >
+              <svg class="flag" id="langFlag">
+                <use href="#flag-ka" />
+              </svg>
+
+              <svg class="chev">
+                <use href="#chevron" />
+              </svg>
+            </button>
+
+            <ul class="lang-menu" role="listbox" aria-label="Languages">
+              <li role="none">
+                <button
+                  class="lang-option"
+                  role="option"
+                  type="button"
+                  data-lang="ka"
+                  aria-selected="true"
+                >
+                  <svg class="flag"><use href="#flag-ka" /></svg>
+                  <span>ქართული</span>
+                  <svg class="check"><use href="#tick" /></svg>
+                </button>
+              </li>
+              <li role="none">
+                <button
+                  class="lang-option"
+                  role="option"
+                  type="button"
+                  data-lang="en"
+                  aria-selected="false"
+                >
+                  <svg class="flag"><use href="#flag-en" /></svg>
+                  <span>English</span>
+                  <svg class="check"><use href="#tick" /></svg>
+                </button>
+              </li>
+            </ul>
           </div>
           <!-- Hamburger Menu--->
           <div class="hamburger-menu">
