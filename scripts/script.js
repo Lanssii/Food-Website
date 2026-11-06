@@ -33,18 +33,22 @@ let hamburgerMenu = document.querySelector(".hamburger-menu");
 let sidebar = document.querySelector(".sidebar");
 let overlay = document.querySelector(".overlay");
 let closeBtn = document.querySelector(".close-btn");
+const langSwitcher = document.getElementById("lang");
+const rightSection = document.querySelector(".right-section");
 
 // ===== RESPONSIVE NAVIGATION =====
 // Moves navigation into sidebar on mobile
 function checkWidth() {
   if (window.innerWidth <= 1200) {
     headerNavContainer.style.display = "none";
+    if (langSwitcher) sidebar.appendChild(langSwitcher);
     sidebar.appendChild(headerNav);
     hamburgerMenu.classList.add("show");
   } else {
     hamburgerMenu.classList.remove("show");
     headerNavContainer.style.display = "flex";
     headerNavContainer.appendChild(headerNav);
+    if (langSwitcher) rightSection.insertBefore(langSwitcher, hamburgerMenu);
     overlay.classList.remove("show");
   }
 }

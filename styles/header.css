@@ -176,6 +176,7 @@ header {
   .header-nav {
     flex-direction: column;
     gap: 40px;
+    align-items: normal;
   }
   .book-table-container {
     display: none;
