@@ -1,0 +1,189 @@
+{
+  "common": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "menu": "Menu",
+      "pages": "Pages",
+      "contact": "Contact"
+    },
+    "bookTable": "Book A Table",
+    "exploreMenu": "Explore Menu",
+    "categories": {
+      "breakfast": "Breakfast",
+      "mainDishes": "Main Dishes",
+      "drinks": "Drinks",
+      "desserts": "Desserts",
+      "all": "All"
+    },
+    "visit": {
+      "title": "Come and visit us",
+      "address": "837 W. Marshall Lane Marshalltown, IA 50158, Los Angeles"
+    },
+    "story": {
+      "title": "We provide healthy food for your family.",
+      "p1": "Our story began with a vision to create a unique dining experience that merges fine dining, exceptional service, and a vibrant ambiance. Rooted in city's rich culinary culture, we aim to honor our local roots while infusing a global palate.",
+      "p2": "At place, we believe that dining is not just about food, but also about the overall experience. Our staff, renowned for their warmth and dedication, strives to make every visit an unforgettable event.",
+      "more": "More About Us"
+    },
+    "reviewsTitle": "What Our Customers Say",
+    "blogTitle": "Our Blog & Articles",
+    "articleDate": "January 3, 2023",
+    "footer": {
+      "about": "In the new era of technology we look a in the future with certainty and pride to for our company and.",
+      "pricing": "Pricing",
+      "blog": "Blog",
+      "delivery": "Delivery",
+      "utilityPages": "Utility Pages",
+      "startHere": "Start Here",
+      "styleguide": "Styleguide",
+      "passwordProtected": "Password Protected",
+      "notFound": "404 Not Found",
+      "licenses": "Licenses",
+      "changelog": "Changelog",
+      "viewMore": "View More",
+      "instagram": "Follow Us On Instagram",
+      "copyright": "© 2026 Lana Shotashvili. All rights reserved."
+    },
+    "cookie": {
+      "text": "We use cookies to improve your experience. By clicking \"Accept\", you agree to our storage of cookies.",
+      "accept": "Accept",
+      "reject": "Reject"
+    },
+    "lang": {
+      "change": "Change language",
+      "list": "Languages"
+    },
+    "pageIntro": "We consider all the drivers of change gives you the components you need to change to create a truly happens."
+  },
+  "home": {
+    "hero": {
+      "title": "Best food for<br />your taste",
+      "subtitle": "Discover delectable cuisine and unforgettable moments<br />in our welcoming, culinary haven."
+    },
+    "browseMenu": {
+      "title": "Browse Our Menu",
+      "cardText": "In the new era of technology we look in the future..."
+    },
+    "services": {
+      "title": "We also offer unique services for your events",
+      "caterings": "Caterings",
+      "text": "In the new era of technology we look in the future with certainty for life.",
+      "birthdays": "Birthdays",
+      "weddings": "Weddings",
+      "events": "Events"
+    },
+    "delivery": {
+      "title": "Fastest Food Delivery in City",
+      "text": "Our visual designer lets you quickly and of drag a down your way to customapps for both keep desktop.",
+      "item1": "Delivery within 30 minutes",
+      "item2": "Best Offer & Prices",
+      "item3": "Online Services Available"
+    },
+    "readAllArticles": "Read All Articles"
+  },
+  "blog": {
+    "articles": {
+      "burgerPizza": "The secret tips & tricks to prepare a perfect burger & pizza for our customers",
+      "burgerPizzaText": "Lorem ipsum dolor sit amet consectetur of a adipiscing elitilmim semper adipiscing massa gravida nisi cras enim quis nibholm varius amet gravida ut facilisis neque egestas.",
+      "frenchFries": "How to prepare the perfect french fries in an air fryer",
+      "chickenTenders": "How to prepare delicious chicken tenders",
+      "cheesecake": "7 delicious cheesecake recipes you can prepare",
+      "pizzaPlaces": "5 great pizza restaurants you should visit this city",
+      "sushi": "How to prepare a delicious gluten free sushi",
+      "baking": "Exclusive baking lessons from the pastry king",
+      "fries": "How to prepare the perfect fries in an air fryer",
+      "gadgets": "5 great cooking gadgets you can buy to save time",
+      "burger": "The secret tips & tricks to prepare a perfect burger",
+      "kidsDesserts": "Top 20 simple and quick desserts for kids"
+    }
+  },
+  "about": {
+    "video": {
+      "title": "Feel the authentic & original taste from us"
+    },
+    "features": {
+      "multiCuisine": "Multi Cuisine",
+      "text": "In the new era of technology we look in the future with certainty life.",
+      "easyToOrder": "Easy To Order",
+      "fastDelivery": "Fast Delivery"
+    },
+    "stats": {
+      "title": "A little information for our valuable guest",
+      "locations": "Locations",
+      "founded": "Founded",
+      "staff": "Staff Members",
+      "customers": "Satisfied Customers"
+    }
+  },
+  "booking": {
+    "date": "Date",
+    "time": "Time",
+    "phone": "Phone",
+    "totalPerson": "Total Person"
+  },
+  "forms": {
+    "name": "Name",
+    "placeholders": {
+      "name": "Enter your name",
+      "phone": "x-xxx-xxx-xxx",
+      "email": "Enter email address",
+      "subject": "Write a subject",
+      "message": "Write your message (optional)"
+    },
+    "send": "Send",
+    "errors": {
+      "required": "This field is required.",
+      "lettersOnly": "Please use only letters.",
+      "nameLength": "Name must have at least 2 characters.",
+      "invalidPhone": "Please enter a valid phone number.",
+      "pastDate": "Date cannot be in the past.",
+      "workingHours": "We work from 10:00 to 00:00.",
+      "tooManyPeople": "Please contact us in order to discuss the booking for more than 10 people.",
+      "invalidEmail": "Please enter a valid email."
+    },
+    "sent": "Form is sent!"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "callUs": "Call Us:",
+    "hours": "Hours:",
+    "hoursWeekdays": "Mon-Fri: 11am - 8pm",
+    "hoursWeekend": "Sat, Sun: 9am - 10pm",
+    "location": "Our Location:",
+    "addressLine1": "123 Bridge Street",
+    "addressLine2": "Nowhere Land, LA 12345",
+    "addressCountry": "United States"
+  },
+  "menu": {
+    "title": "Our Menu",
+    "loading": "Loading...",
+    "error": "Failed to load products. Please try again.",
+    "empty": "No items found.",
+    "fallbackFood": "A delicious dish crafted with the finest fresh ingredients.",
+    "fallbackDrink": "A handcrafted cocktail made with premium ingredients."
+  },
+  "reviews": {
+    "1": {
+      "headline": "The best restaurant ever!",
+      "comment": "The atmosphere was incredible and the steaks were cooked to perfection. I will definitely be coming back next week with my friends.",
+      "user_name": "Elene Avaliani",
+      "location": "Georgia, Tbilisi"
+    },
+    "2": {
+      "headline": "Authentic Italian taste!",
+      "comment": "I felt like I was in Rome! The carbonara was creamy and the tiramisu is the best I've had in the city.",
+      "user_name": "John Doe",
+      "location": "New York, USA"
+    },
+    "3": {
+      "headline": "Great coffee, slow service!",
+      "comment": "The latte was top-notch, but I had to wait 20 minutes for my toast. Good for a lazy Sunday, not for a quick break.",
+      "user_name": "Sophie Schneider",
+      "location": "Munich, Germany"
+    }
+  }
+}
