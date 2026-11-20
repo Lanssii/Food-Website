@@ -34,7 +34,7 @@ form.addEventListener("submit", (e) => {
 
   let isValid = true;
 
-  let namePattern = /^[a-zA-Zа-яА-ЯёЁ\s]+$/;
+  let namePattern = /^[a-zA-Zა-ჰа-яА-ЯёЁ\s]+$/;
   const phonePattern = /^\+?[0-9]{9,12}$/;
 
   const today = new Date().toISOString().split("T")[0];
@@ -48,57 +48,60 @@ form.addEventListener("submit", (e) => {
   // name check
   if (nameInput.value.trim() === "") {
     isValid = false;
-    nameError.textContent = "This field is required.";
+    nameError.textContent = t("forms.errors.required", "This field is required.");
   } else if (!namePattern.test(nameInput.value.trim())) {
     isValid = false;
-    nameError.textContent = "Please use only letters.";
+    nameError.textContent = t("forms.errors.lettersOnly", "Please use only letters.");
   } else if (nameInput.value.trim().length < 2) {
     isValid = false;
-    nameError.textContent = "Name must have more than 2 characters.";
+    nameError.textContent = t("forms.errors.nameLength", "Name must have at least 2 characters.");
   }
   // phone check
   if (phoneInput.value.trim() === "") {
     isValid = false;
-    phoneError.textContent = "This field is required.";
+    phoneError.textContent = t("forms.errors.required", "This field is required.");
   } else if (!phonePattern.test(phoneInput.value.trim())) {
     isValid = false;
-    phoneError.textContent = "Please enter a valid phone number.";
+    phoneError.textContent = t("forms.errors.invalidPhone", "Please enter a valid phone number.");
   }
   // date check
   if (dateInput.value.trim() === "") {
     isValid = false;
-    dateError.textContent = "This field is required.";
+    dateError.textContent = t("forms.errors.required", "This field is required.");
   } else if (dateInput.value < today) {
     isValid = false;
-    dateError.textContent = "Date cannot be in the past.";
+    dateError.textContent = t("forms.errors.pastDate", "Date cannot be in the past.");
   }
   // time check
   if (timeInput.value.trim() === "") {
     isValid = false;
-    timeError.textContent = "This field is required.";
+    timeError.textContent = t("forms.errors.required", "This field is required.");
   } else if (timeInput.value < "10:00" || timeInput.value > "23:59") {
     isValid = false;
-    timeError.textContent = "We work from 10:00 to 00:00.";
+    timeError.textContent = t("forms.errors.workingHours", "We work from 10:00 to 00:00.");
   }
   // totalPerson check
   if (totalPersonInput.value.trim() === "") {
     isValid = false;
-    totalPersonError.textContent = "This field is required.";
+    totalPersonError.textContent = t("forms.errors.required", "This field is required.");
   } else if (totalPersonInput.value < 1 || totalPersonInput.value > 10) {
     isValid = false;
     totalPersonError.textContent =
-      "Please contact us in order to discuss the booking for more than 10 people.";
+      t(
+        "forms.errors.tooManyPeople",
+        "Please contact us in order to discuss the booking for more than 10 people."
+      );
   }
 
   if (isValid) {
     sendBtn.classList.add("success");
-    sendBtn.textContent = "Form is sent!";
+    sendBtn.textContent = t("forms.sent", "Form is sent!");
 
     form.reset();
 
     setTimeout(() => {
       sendBtn.classList.remove("success");
-      sendBtn.textContent = "Send";
+      sendBtn.textContent = t("common.bookTable", "Book A Table");
     }, 2000);
   }
 });
@@ -114,5 +117,5 @@ phoneInput.addEventListener("input", () => {
 });
 
 nameInput.addEventListener("input", () => {
-  nameInput.value = nameInput.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, "");
+  nameInput.value = nameInput.value.replace(/[^a-zA-Zა-ჰа-яА-ЯёЁ\s]/g, "");
 });

@@ -416,7 +416,6 @@ button {
   font-weight: 500;
   font-size: 55px;
   width: 100%;
-  max-width: 670px;
   text-align: start;
   color: #2c2f24;
 }
@@ -530,7 +529,7 @@ button {
 }
 .delivery-info {
   width: 100%;
-  padding: 44px;
+  padding: 30px;
   line-height: 1.4;
 }
 

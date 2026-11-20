@@ -13,9 +13,10 @@ function normalizeMeal(meal, index) {
     id: meal.idMeal,
     name: meal.strMeal,
     thumb: meal.strMealThumb,
+    // null -> translated fallback text is used when rendering
     description: meal.strInstructions
       ? meal.strInstructions.slice(0, 80) + "..."
-      : "A delicious dish crafted with the finest fresh ingredients.",
+      : null,
     price: FOOD_PRICES[index % FOOD_PRICES.length],
     type: "food",
   };
@@ -28,7 +29,7 @@ function normalizeDrink(drink, index) {
     thumb: drink.strDrinkThumb,
     description: drink.strInstructions
       ? drink.strInstructions.slice(0, 80) + "..."
-      : "A handcrafted cocktail made with premium ingredients.",
+      : null,
     price: DRINK_PRICES[index % DRINK_PRICES.length],
     type: "drink",
   };
@@ -60,10 +61,23 @@ async function getAllItems() {
   return mixed.sort(() => Math.random() - 0.5);
 }
 
+// Current view state (used to re-render when the language changes)
+let lastItems = null;
+let lastState = "loading";
+
+function fallbackDescription(item) {
+  return item.type === "drink"
+    ? t("menu.fallbackDrink", "A handcrafted cocktail made with premium ingredients.")
+    : t("menu.fallbackFood", "A delicious dish crafted with the finest fresh ingredients.");
+}
+
 // Render
 function renderCards(items) {
+  lastItems = items;
+  lastState = "items";
+
   if (!items.length) {
-    productsContainer.innerHTML = "<p class='no-results'>No items found.</p>";
+    productsContainer.innerHTML = `<p class='no-results'>${t("menu.empty", "No items found.")}</p>`;
     return;
   }
 
@@ -79,7 +93,7 @@ function renderCards(items) {
       <div class="product-info">
         <p class="price">$${item.price.toFixed(2)}</p>
         <h4 class="product-name">${item.name}</h4>
-        <p class="product-detail">${item.description}</p>
+        <p class="product-detail">${item.description || fallbackDescription(item)}</p>
       </div>
     `;
     productsContainer.appendChild(card);
@@ -87,13 +101,24 @@ function renderCards(items) {
 }
 
 function setLoading() {
-  productsContainer.innerHTML = "<p class='loading'>Loading...</p>";
+  lastState = "loading";
+  productsContainer.innerHTML = `<p class='loading'>${t("menu.loading", "Loading...")}</p>`;
 }
 
 function setError() {
-  productsContainer.innerHTML =
-    "<p class='error'>Failed to load products. Please try again.</p>";
+  lastState = "error";
+  productsContainer.innerHTML = `<p class='error'>${t(
+    "menu.error",
+    "Failed to load products. Please try again."
+  )}</p>`;
 }
+
+// Re-render dynamic text in the new language
+document.addEventListener("i18n:changed", () => {
+  if (lastState === "items" && lastItems) renderCards(lastItems);
+  else if (lastState === "error") setError();
+  else setLoading();
+});
 
 // Category buttons
 const CATEGORIES = {
@@ -125,7 +150,7 @@ function initButtons() {
     btn.addEventListener("click", () => {
       buttons.forEach((b) => b.classList.remove("btn-active"));
       btn.classList.add("btn-active");
-      loadCategory(btn.textContent.trim());
+      loadCategory(btn.dataset.category);
     });
   });
 }
@@ -143,7 +168,7 @@ function initPage() {
     const buttons = document.querySelectorAll(".buttons-section button");
 
     buttons.forEach((btn) => {
-      if (btn.textContent.trim() === selectedCategory) {
+      if (btn.dataset.category === selectedCategory) {
         btn.classList.add("btn-active");
       } else {
         btn.classList.remove("btn-active");

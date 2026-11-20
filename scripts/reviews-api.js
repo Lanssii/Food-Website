@@ -5,14 +5,24 @@ const reviewsContainer = document.querySelector(".reviews-grid");
  * Using async/await for clean asynchronous data handling.
  */
 
-async function getReview() {
-  try {
-    const res = await fetch("../data.json");
-    const data = await res.json();
+let reviewsData = [];
 
-    reviewsContainer.innerHTML = "";
+// Translated field if it exists in locales, otherwise the value from data.json
+function reviewText(review, field) {
+  return t(`reviews.${review.id}.${field}`, review[field]);
+}
 
-    data.forEach((review) => {
+function renderReviews() {
+  reviewsContainer.innerHTML = "";
+
+  reviewsData.forEach((original) => {
+    const review = {
+      ...original,
+      headline: reviewText(original, "headline"),
+      comment: reviewText(original, "comment"),
+      user_name: reviewText(original, "user_name"),
+      location: reviewText(original, "location"),
+    };
       const card = `
         <div class="reviews-card">
               <h3>${review.headline}</h3>
@@ -31,11 +41,21 @@ async function getReview() {
               </div>
             </div>`;
 
-      reviewsContainer.insertAdjacentHTML("beforeend", card);
-    });
+    reviewsContainer.insertAdjacentHTML("beforeend", card);
+  });
+}
+
+async function getReview() {
+  try {
+    const res = await fetch("../data.json");
+    reviewsData = await res.json();
+    renderReviews();
   } catch (error) {
     console.log("Failed to load reviews:", error);
   }
 }
 
-getReview();
+if (reviewsContainer) {
+  getReview();
+  document.addEventListener("i18n:changed", renderReviews);
+}

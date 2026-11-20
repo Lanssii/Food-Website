@@ -66,11 +66,11 @@
           >
           <div class="header-nav-container">
             <nav class="header-nav">
-              <a href="index.html" class="header-nav-active">Home</a>
-              <a href="../pages/about.html">About</a>
-              <a href="../pages/menu.html">Menu</a>
-              <a href="../pages/blog.html">Pages</a>
-              <a href="../pages/contact.html">Contact</a>
+              <a data-i18n="common.nav.home" href="index.html" class="header-nav-active">Home</a>
+              <a data-i18n="common.nav.about" href="../pages/about.html">About</a>
+              <a data-i18n="common.nav.menu" href="../pages/menu.html">Menu</a>
+              <a data-i18n="common.nav.pages" href="../pages/blog.html">Pages</a>
+              <a data-i18n="common.nav.contact" href="../pages/contact.html">Contact</a>
             </nav>
           </div>
         </div>
@@ -150,7 +150,7 @@
           </svg>
 
           <div class="lang" id="lang">
-            <button
+            <button data-i18n-aria-label="common.lang.change"
               class="lang-btn"
               id="langBtn"
               type="button"
@@ -167,7 +167,7 @@
               </svg>
             </button>
 
-            <ul class="lang-menu" role="listbox" aria-label="Languages">
+            <ul data-i18n-aria-label="common.lang.list" class="lang-menu" role="listbox" aria-label="Languages">
               <li role="none">
                 <button
                   class="lang-option"
@@ -216,17 +216,17 @@
       <section class="hero">
         <div class="hero-overlay">
           <div class="hero-content container">
-            <h1>Best food for <br />your taste</h1>
-            <p>
+            <h1 data-i18n-html="home.hero.title">Best food for <br />your taste</h1>
+            <p data-i18n-html="home.hero.subtitle">
               Discover delectable cuisine and unforgettable moments <br />
               in our welcoming, culinary haven.
             </p>
             <div class="hero-buttons">
               <a href="../pages/booking.html">
-                <button class="hero-btn-book">Book A Table</button>
+                <button data-i18n="common.bookTable" class="hero-btn-book">Book A Table</button>
               </a>
               <a href="../pages/menu.html">
-                <button class="hero-btn-explore">Explore Menu</button></a
+                <button data-i18n="common.exploreMenu" class="hero-btn-explore">Explore Menu</button></a
               >
             </div>
           </div>
@@ -235,33 +235,33 @@
       <!-- MENU -->
       <section class="menu-section">
         <div class="menu">
-          <h1>Browse Our Menu</h1>
+          <h1 data-i18n="home.browseMenu.title">Browse Our Menu</h1>
           <div class="menu-grid container">
             <div class="menu-card">
               <img src="images/breakfast-icon.png" alt="breakfast-icon" />
-              <h3>Breakfast</h3>
-              <p>In the new era of technology we look in the future...</p>
-              <a href="../pages/menu.html?category=Breakfast">Explore Menu</a>
+              <h3 data-i18n="common.categories.breakfast">Breakfast</h3>
+              <p data-i18n="home.browseMenu.cardText">In the new era of technology we look in the future...</p>
+              <a data-i18n="common.exploreMenu" href="../pages/menu.html?category=Breakfast">Explore Menu</a>
             </div>
             <div class="menu-card">
               <img src="images/dishes-icon.png" alt="dishes-icon" />
-              <h3>Main Dishes</h3>
-              <p>In the new era of technology we look in the future...</p>
-              <a href="../pages/menu.html?category=Main%20Dishes"
+              <h3 data-i18n="common.categories.mainDishes">Main Dishes</h3>
+              <p data-i18n="home.browseMenu.cardText">In the new era of technology we look in the future...</p>
+              <a data-i18n="common.exploreMenu" href="../pages/menu.html?category=Main%20Dishes"
                 >Explore Menu</a
               >
             </div>
             <div class="menu-card">
               <img src="images/drinks-icon.png" alt="drinks-icon" />
-              <h3>Drinks</h3>
-              <p>In the new era of technology we look in the future...</p>
-              <a href="../pages/menu.html?category=Drinks">Explore Menu</a>
+              <h3 data-i18n="common.categories.drinks">Drinks</h3>
+              <p data-i18n="home.browseMenu.cardText">In the new era of technology we look in the future...</p>
+              <a data-i18n="common.exploreMenu" href="../pages/menu.html?category=Drinks">Explore Menu</a>
             </div>
             <div class="menu-card">
               <img src="images/desserts-icon.png" alt="desserts-icon" />
-              <h3>Desserts</h3>
-              <p>In the new era of technology we look in the future...</p>
-              <a href="../pages/menu.html?category=Desserts">Explore Menu</a>
+              <h3 data-i18n="common.categories.desserts">Desserts</h3>
+              <p data-i18n="home.browseMenu.cardText">In the new era of technology we look in the future...</p>
+              <a data-i18n="common.exploreMenu" href="../pages/menu.html?category=Desserts">Explore Menu</a>
             </div>
           </div>
         </div>
@@ -275,7 +275,7 @@
             </div>
             <div class="contacts">
               <div class="contacts-info">
-                <h3>Come and visit us</h3>
+                <h3 data-i18n="common.visit.title">Come and visit us</h3>
                 <div class="mobile">
                   <img src="images/phone-icon-contacts.png" alt="phone-icon" />
                   <p>(414) 857 - 0107</p>
@@ -289,7 +289,7 @@
                     src="images/address-icon-contacts.png"
                     alt="address-icon"
                   />
-                  <p>
+                  <p data-i18n="common.visit.address">
                     837 W. Marshall Lane Marshalltown, IA 50158, Los Angeles
                   </p>
                 </div>
@@ -297,21 +297,21 @@
             </div>
           </div>
           <div class="contact-information">
-            <h1>We provide healthy food for your family.</h1>
-            <p class="first-info">
+            <h1 data-i18n="common.story.title">We provide healthy food for your family.</h1>
+            <p data-i18n="common.story.p1" class="first-info">
               Our story began with a vision to create a unique dining experience
               that merges fine dining, exceptional service, and a vibrant
               ambiance. Rooted in city's rich culinary culture, we aim to honor
               our local roots while infusing a global palate.
             </p>
-            <p class="second-info">
+            <p data-i18n="common.story.p2" class="second-info">
               At place, we believe that dining is not just about food, but also
               about the overall experience. Our staff, renowned for their warmth
               and dedication, strives to make every visit an unforgettable
               event.
             </p>
             <a href="../pages/blog.html">
-              <button class="more-about-btn">More About Us</button>
+              <button data-i18n="common.story.more" class="more-about-btn">More About Us</button>
             </a>
           </div>
         </div>
@@ -319,14 +319,14 @@
       <!-- SERVICE -->
       <section class="service-section">
         <div class="service container">
-          <h1>We also offer unique services for your events</h1>
+          <h1 data-i18n="home.services.title">We also offer unique services for your events</h1>
           <div class="service-grid">
             <div class="service-card">
               <div class="image-container">
                 <img src="images/caterings.jpg" alt="caterings" />
               </div>
-              <h3>Caterings</h3>
-              <p>
+              <h3 data-i18n="home.services.caterings">Caterings</h3>
+              <p data-i18n="home.services.text">
                 In the new era of technology we look in the future with
                 certainty for life.
               </p>
@@ -335,8 +335,8 @@
               <div class="image-container">
                 <img src="images/birthdays.jpg" alt="birthdays" />
               </div>
-              <h3>Birthdays</h3>
-              <p>
+              <h3 data-i18n="home.services.birthdays">Birthdays</h3>
+              <p data-i18n="home.services.text">
                 In the new era of technology we look in the future with
                 certainty for life.
               </p>
@@ -345,8 +345,8 @@
               <div class="image-container">
                 <img src="images/weddings.jpg" alt="weddings" />
               </div>
-              <h3>Weddings</h3>
-              <p>
+              <h3 data-i18n="home.services.weddings">Weddings</h3>
+              <p data-i18n="home.services.text">
                 In the new era of technology we look in the future with
                 certainty for life.
               </p>
@@ -355,8 +355,8 @@
               <div class="image-container">
                 <img src="images/events.jpg" alt="events" />
               </div>
-              <h3>Events</h3>
-              <p>
+              <h3 data-i18n="home.services.events">Events</h3>
+              <p data-i18n="home.services.text">
                 In the new era of technology we look in the future with
                 certainty for life.
               </p>
@@ -381,23 +381,23 @@
             </div>
           </div>
           <div class="delivery-info">
-            <h1>Fastest Food Delivery in City</h1>
-            <p class="designer-information">
+            <h1 data-i18n="home.delivery.title">Fastest Food Delivery in City</h1>
+            <p data-i18n="home.delivery.text" class="designer-information">
               Our visual designer lets you quickly and of drag a down your way
               to customapps for both keep desktop.
             </p>
             <div class="delivery-information">
               <div class="delivery-time">
                 <img src="images/delivery-time-icon.png" alt="delivery-icon" />
-                <p>Delivery within 30 minutes</p>
+                <p data-i18n="home.delivery.item1">Delivery within 30 minutes</p>
               </div>
               <div class="delivery-offer">
                 <img src="images/delivery-offer-icon.png" alt="delivery-icon" />
-                <p>Best Offer & Prices</p>
+                <p data-i18n="home.delivery.item2">Best Offer & Prices</p>
               </div>
               <div class="delivery-service">
                 <img src="images/delivery-cart-icon.png" alt="delivery-icon" />
-                <p>Online Services Available</p>
+                <p data-i18n="home.delivery.item3">Online Services Available</p>
               </div>
             </div>
           </div>
@@ -406,7 +406,7 @@
       <!-- REVIEWS -->
       <section class="reviews-section">
         <div class="reviews container">
-          <h1>What Our Customers Say</h1>
+          <h1 data-i18n="common.reviewsTitle">What Our Customers Say</h1>
           <!-- 
             The reviews-grid is populated dynamically via JavaScript (reviews-api.js).
             Data is fetched from a local data.json file to simulate a real API call.
@@ -420,9 +420,9 @@
       <section class="blog-section">
         <div class="blog container">
           <div class="intro-and-button">
-            <h1>Our Blog &#x26; Articles</h1>
+            <h1 data-i18n="common.blogTitle">Our Blog &#x26; Articles</h1>
             <a href="../pages/blog.html">
-              <button class="read-articles-btn">Read All Articles</button></a
+              <button data-i18n="home.readAllArticles" class="read-articles-btn">Read All Articles</button></a
             >
           </div>
           <div class="blog-cards-container">
@@ -430,12 +430,12 @@
               <div class="blog-card main-blog-card">
                 <img src="images/blog1.jpg" alt="blog" />
                 <div class="blog-info">
-                  <p>January 3, 2023</p>
-                  <h4>
+                  <p data-i18n="common.articleDate">January 3, 2023</p>
+                  <h4 data-i18n="blog.articles.burgerPizza">
                     The secret tips & tricks to prepare a perfect burger & pizza
                     for our customers
                   </h4>
-                  <p>
+                  <p data-i18n="blog.articles.burgerPizzaText">
                     Lorem ipsum dolor sit amet consectetur of a adipiscing
                     elitilmim semper adipiscing massa gravida nisi cras enim
                     quis nibholm varius amet gravida ut facilisis neque egestas.
@@ -449,8 +449,8 @@
                   <img src="images/blog2.jpg" alt="blog" />
                 </div>
                 <div class="small-blog-info">
-                  <p>January 3, 2023</p>
-                  <h4>
+                  <p data-i18n="common.articleDate">January 3, 2023</p>
+                  <h4 data-i18n="blog.articles.frenchFries">
                     How to prepare the perfect french fries in an air fryer
                   </h4>
                 </div>
@@ -460,8 +460,8 @@
                   <img src="images/blog3.jpg" alt="blog" />
                 </div>
                 <div class="small-blog-info">
-                  <p>January 3, 2023</p>
-                  <h4>How to prepare delicious chicken tenders</h4>
+                  <p data-i18n="common.articleDate">January 3, 2023</p>
+                  <h4 data-i18n="blog.articles.chickenTenders">How to prepare delicious chicken tenders</h4>
                 </div>
               </div>
               <div class="blog-card">
@@ -469,8 +469,8 @@
                   <img src="images/blog4.jpg" alt="blog" />
                 </div>
                 <div class="small-blog-info">
-                  <p>January 3, 2023</p>
-                  <h4>7 delicious cheesecake recipes you can prepare</h4>
+                  <p data-i18n="common.articleDate">January 3, 2023</p>
+                  <h4 data-i18n="blog.articles.cheesecake">7 delicious cheesecake recipes you can prepare</h4>
                 </div>
               </div>
               <div class="blog-card">
@@ -478,8 +478,8 @@
                   <img src="images/blog5.jpg" alt="blog" />
                 </div>
                 <div class="small-blog-info">
-                  <p>January 3, 2023</p>
-                  <h4>5 great pizza restaurants you should visit this city</h4>
+                  <p data-i18n="common.articleDate">January 3, 2023</p>
+                  <h4 data-i18n="blog.articles.pizzaPlaces">5 great pizza restaurants you should visit this city</h4>
                 </div>
               </div>
             </div>
@@ -495,7 +495,7 @@
             <img src="images/brand-logo-footer.png" alt="brand-logo" />
             <h3>Bistro Bliss</h3>
           </div>
-          <p>
+          <p data-i18n="common.footer.about">
             In the new era of technology we look a in the future with certainty
             and pride to for our company and.
           </p>
@@ -508,32 +508,32 @@
         </section>
         <nav class="footer-nav">
           <section>
-            <h3>Pages</h3>
+            <h3 data-i18n="common.nav.pages">Pages</h3>
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="../pages/about.html">About</a></li>
-              <li><a href="../pages/menu.html">Menu</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="../pages/blog.html">Blog</a></li>
-              <li><a href="../pages/contact.html">Contact</a></li>
-              <li><a href="#">Delivery</a></li>
+              <li><a data-i18n="common.nav.home" href="index.html">Home</a></li>
+              <li><a data-i18n="common.nav.about" href="../pages/about.html">About</a></li>
+              <li><a data-i18n="common.nav.menu" href="../pages/menu.html">Menu</a></li>
+              <li><a data-i18n="common.footer.pricing" href="#">Pricing</a></li>
+              <li><a data-i18n="common.footer.blog" href="../pages/blog.html">Blog</a></li>
+              <li><a data-i18n="common.nav.contact" href="../pages/contact.html">Contact</a></li>
+              <li><a data-i18n="common.footer.delivery" href="#">Delivery</a></li>
             </ul>
           </section>
           <section>
-            <h3>Utility Pages</h3>
+            <h3 data-i18n="common.footer.utilityPages">Utility Pages</h3>
             <ul>
-              <li><a href="#">Start Here</a></li>
-              <li><a href="#">Styleguide</a></li>
-              <li><a href="#">Password Protected</a></li>
-              <li><a href="#">404 Not Found</a></li>
-              <li><a href="#">Licenses</a></li>
-              <li><a href="#">Changelog</a></li>
-              <li><a href="#">View More</a></li>
+              <li><a data-i18n="common.footer.startHere" href="#">Start Here</a></li>
+              <li><a data-i18n="common.footer.styleguide" href="#">Styleguide</a></li>
+              <li><a data-i18n="common.footer.passwordProtected" href="#">Password Protected</a></li>
+              <li><a data-i18n="common.footer.notFound" href="#">404 Not Found</a></li>
+              <li><a data-i18n="common.footer.licenses" href="#">Licenses</a></li>
+              <li><a data-i18n="common.footer.changelog" href="#">Changelog</a></li>
+              <li><a data-i18n="common.footer.viewMore" href="#">View More</a></li>
             </ul>
           </section>
         </nav>
         <section class="footer-insta">
-          <h3>Follow Us On Instagram</h3>
+          <h3 data-i18n="common.footer.instagram">Follow Us On Instagram</h3>
           <div class="insta-grid">
             <div class="image-container">
               <img src="images/footer-grid1.jpg" alt="food" />
@@ -551,22 +551,21 @@
         </section>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Lana Shotashvili. All rights reserved.</p>
+        <p data-i18n="common.footer.copyright">&copy; 2026 Lana Shotashvili. All rights reserved.</p>
       </div>
     </footer>
     <!-- Cookie Notification Banner -->
     <div id="cookie-banner" class="cookie-banner">
-      <p>
+      <p data-i18n="common.cookie.text">
         We use cookies to improve your experience. By clicking "Accept", you
         agree to our storage of cookies.
       </p>
-      <button id="accept-cookies">Accept</button>
-      <button id="reject-cookies">Reject</button>
+      <button data-i18n="common.cookie.accept" id="accept-cookies">Accept</button>
+      <button data-i18n="common.cookie.reject" id="reject-cookies">Reject</button>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/i18next@latest/dist/umd/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.16.8/dist/umd/i18next.min.js"></script>
     <script src="scripts/i18n.js"></script>
-    <script src="scripts/languageSwitcher.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/reviews-api.js"></script>
   </body>
