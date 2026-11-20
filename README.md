@@ -325,10 +325,3 @@ Personal project, later extended into a **university production practice (final)
 
 - GitHub: [@Lanssii](https://github.com/Lanssii)
 - Live demo: [food-website-theta-seven.vercel.app](https://food-website-theta-seven.vercel.app/)
-
-<details>
-<summary><b>Keywords</b></summary>
-
-restaurant website, bilingual website, Georgian English website, i18n, i18next, internationalization, localization, l10n, language switcher, vanilla JavaScript, no framework, HTML5, CSS3, ES6, responsive design, mobile navigation drawer, CSS Grid, Flexbox, Fetch API, REST API integration, TheMealDB, TheCocktailDB, async/await, Promise.all, CustomEvent, event-driven architecture, form validation, regex validation, input masking, localStorage, cookie consent, deep linking, URLSearchParams, accessibility, WAI-ARIA, Figma to code, Vercel deployment, front-end portfolio project, university project
-
-</details>
