@@ -78,7 +78,7 @@ The result: the site gained a second language **without losing the original Engl
 | ![Home — Georgian](docs/screenshots/home-ka.jpg)                  | ![Home — English](docs/screenshots/home-en.jpg)                  |
 | ![Language switcher — Georgian](docs/screenshots/switcher-ka.jpg) | ![Language switcher — English](docs/screenshots/switcher-en.jpg) |
 | ![Booking validation — Georgian](docs/screenshots/booking-ka.jpg) | ![Booking validation — English](docs/screenshots/booking-en.jpg) |
-| ![Mobile — Georgian](docs/screenshots/mobile-ka.jpg)              | ![Mobile — English](docs/screenshots/mobile-en.jpg)              |
+| ![Mobile — Georgian](docs/screenshots/mobile-ka.png)              | ![Mobile — English](docs/screenshots/mobile-en.png)              |
 
 ---
 
