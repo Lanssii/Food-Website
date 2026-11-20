@@ -10,7 +10,8 @@
 
 **Bistro Bliss** is a responsive, **bilingual (Georgian 🇬🇪 / English 🇬🇧) multi-page restaurant website** built with **HTML5, CSS3 and Vanilla JavaScript**, with no UI framework, no bundler and no build step. It turns a **Figma design** into a production website with a **dynamic menu powered by two REST APIs**, **client-side internationalization (i18n) with i18next**, **custom form validation**, a **responsive mobile navigation drawer** and **persistent user preferences in `localStorage`**.
 
-🔗 **Live:** [food-website-theta-seven.vercel.app](https://food-website-theta-seven.vercel.app/)
+**Live:** [food-website-theta-seven.vercel.app](https://food-website-theta-seven.vercel.app/)
+**Design:** [View original Figma design](https://www.figma.com/design/DSJyjtjA3x7fD08DYP7bYT/Food---Website-Design--Community-?node-id=0-1&p=f)
 
 ![Home page — Georgian](docs/screenshots/home-ka.jpg)
 
@@ -84,18 +85,18 @@ The result: the site gained a second language **without losing the original Engl
 
 ## Tech Stack
 
-| Layer                | Technology                                                                                                                             |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Markup               | **HTML5**: semantic elements, `data-*` attributes, inline **SVG sprite** (`<symbol>` + `<use>`)                                        |
-| Styling              | **CSS3**: Flexbox, CSS Grid, Media Queries, transitions, `prefers-reduced-motion`, Eric Meyer CSS Reset                                |
-| Logic                | **Vanilla JavaScript (ES2020+)**: `async/await`, Fetch API, `Promise.all`, Optional Chaining, Spread, `CustomEvent`, `URLSearchParams` |
-| Internationalization | **i18next 23.16.8** (UMD build via jsDelivr CDN), JSON locale files                                                                    |
-| Data                 | **TheMealDB API**, **TheCocktailDB API**, local `data.json`                                                                            |
-| Storage              | **Web Storage API** (`localStorage`): `lang`, `cookieChoice`                                                                           |
-| Fonts                | Google Fonts: **Playfair Display** (headings), **DM Sans** (body)                                                                      |
-| Design               | **Figma**                                                                                                                              |
-| Version control      | **Git + GitHub**, Conventional Commits (`feat`, `refactor`, `style`, `docs`)                                                           |
-| Hosting / CI/CD      | **Vercel** static hosting, automatic deploy on push to `main`                                                                          |
+| Layer                | Technology                                                                                                                                     |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| Markup               | **HTML5**: semantic elements, `data-*` attributes, inline **SVG sprite** (`<symbol>` + `<use>`)                                                |
+| Styling              | **CSS3**: Flexbox, CSS Grid, Media Queries, transitions, `prefers-reduced-motion`, Eric Meyer CSS Reset                                        |
+| Logic                | **Vanilla JavaScript (ES2020+)**: `async/await`, Fetch API, `Promise.all`, Optional Chaining, Spread, `CustomEvent`, `URLSearchParams`         |
+| Internationalization | **i18next 23.16.8** (UMD build via jsDelivr CDN), JSON locale files                                                                            |
+| Data                 | **TheMealDB API**, **TheCocktailDB API**, local `data.json`                                                                                    |
+| Storage              | **Web Storage API** (`localStorage`): `lang`, `cookieChoice`                                                                                   |
+| Fonts                | Google Fonts: **Playfair Display** (headings), **DM Sans** (body)                                                                              |
+| Design               | **Figma** — [Original Community Design](https://www.figma.com/design/DSJyjtjA3x7fD08DYP7bYT/Food---Website-Design--Community-?node-id=0-1&p=f) |     |
+| Version control      | **Git + GitHub**, Conventional Commits (`feat`, `refactor`, `style`, `docs`)                                                                   |
+| Hosting / CI/CD      | **Vercel** static hosting, automatic deploy on push to `main`                                                                                  |
 
 **Why Vanilla JavaScript?** For a site of this size (6 pages, 7 scripts), a framework would add complexity and bundle size without real benefit. Building without one shows command of the fundamentals: direct DOM control, event handling, asynchronous programming and state management.
 
